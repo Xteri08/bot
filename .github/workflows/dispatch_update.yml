@@ -1,0 +1,17 @@
+name: Dispatch update event
+
+on:
+  push:
+    branches:
+      - main # or your branch name
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch event
+        uses: peter-murray/repository-dispatch@v3
+        with:
+          repository: Xteri08/ticket-bot
+          event: bot_updated
+          client_payload: '{"ref": "${{ github.ref }}"}'
