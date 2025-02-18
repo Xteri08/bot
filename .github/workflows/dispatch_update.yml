@@ -12,6 +12,7 @@ jobs:
       - name: Dispatch event
         uses: peter-murray/repository-dispatch@v3
         with:
+          token: ${{ secrets.PAT }}
           repository: Xteri08/ticket-bot
           event: bot_updated
           client_payload: '{"ref": "${{ github.ref }}"}'
