@@ -14,5 +14,5 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           repository: Xteri08/ticket-bot
-          event: bot_updated
+          event-type: bot_updated
           client_payload: '{"ref": "${{ github.ref }}"}'
