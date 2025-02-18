@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch event
-        uses: peter-murray/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT }}
           repository: Xteri08/ticket-bot
