@@ -1,11 +1,5 @@
 name: Lint
 on: [push, pull_request]
-  # push:
-    # branches:
-      # - main
-  # pull_request:
-    # branches:
-      # - main
 
 jobs:
   commitlint:
@@ -17,6 +11,9 @@ jobs:
       - uses: wagoid/commitlint-github-action@v5
         with:
           configFile: .commitlintrc.js
+          failOnWarnings: false
+          failOnErrors: true
+          helpURL: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
   eslint:
    runs-on: ubuntu-latest
    steps:
